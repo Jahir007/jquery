@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>jquery</title>
+
+
+        <style>
+
+            #panel, #flip {
+                padding: 5px;
+                text-align: center;
+                background-color: #1eafdb;
+                border: solid 1px #c3c3c3;
+                border-radius: 6px;
+            }
+
+            #panel {
+                background-color: #a9ff81;
+                padding: 200px;
+                display: none;
+            }   
+
+        </style>
+        
+    </head>
+    
+<body>
+
+    <button id="stop">c1</button>
+    <br>   
+    <div id="flip">Click Here</div>
+    <div id="panel">This is the panel content</div>
+
+
+
+
+    <script>
+
+        $(document).ready(function(){
+            $("#flip").click(function(){
+            $("#panel").slideDown(3000);
+            $("#panel").animate({fontSize: '3em'}, 5000);
+            });
+
+            $("#stop").click(function(){
+            $("#panel").stop();
+            });
+        });
+
+
+    </script>
+
+</body>    
+ 
+    
+    
+</html>

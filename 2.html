@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>jquery</title>
+
+        <style>
+
+         
+            
+            #box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin: 10px;
+                position: absolute;
+            }
+
+            #box1{
+                width: 150px;
+                height: 100px;
+                background-color: rgb(0, 255, 115);
+                margin: 10px;
+                position: absolute;
+            }
+
+        </style>
+
+    </head>
+
+<body>
+
+    <button>Animation</button>
+    <br>
+    
+    <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+    <hr>
+
+    <div id="box"> </div>
+
+    <hr>
+    <button id="bt">New animation</button>
+    <br>
+
+    <div id="box1">Hello </div>
+
+
+
+    <script>
+
+        $(document).ready(function(){
+            $("button").click(function() {
+                $("#box").animate({
+                    left: '250px',
+                    //opacity: '0.5',
+                    height: 'toggle',
+                    width: 'toggle',
+                });
+            });
+
+
+            $("#bt").click(function() {
+                var d = $("#box1");
+                d.animate({height: '300px', opacity: '0.4'}, "slow");
+                d.animate({width: '300px', opacity: '0.8'}, "slow");
+                d.animate({height: '100px', opacity: '0.4'}, "slow");
+                d.animate({width: '150px', opacity: '0.8'}, "slow");
+                d.animate({fontSize: '3em'}, "slow");
+            });
+
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -30,11 +30,11 @@
 
         $(document).ready(function() {
             $("button.c1").click (function() {
-                $("ul li").hide();
+                $("ul li").hide(3000);
             });
 
             $("button.c2").click (function() {
-                $("[href]").hide();
+                $("ul li").show(3000);
             });
         });
 
@@ -66,8 +66,7 @@
         <li>contact</li>
     </ul>
     <button class="c1">hide</button>  
-    <p><a href="http://">Link</a></p> 
-    <button class="c2">hide</button>
+    <button class="c2">show</button>
 
 </body>
 </html>
