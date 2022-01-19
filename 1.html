@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>jquery</title>
+    <style>
+
+
+    </style>
+
+    <script>
+        /*........................
+
+        $(document).ready(function(){
+            $("button").click(function() {
+                //$("#headline").hide();
+                // $(".c").hide();
+                //$("*").hide();
+                //$("button.c").hide();
+                $("p:first").hide();
+
+            })   
+
+        })
+
+       .......................... */
+
+        $(document).ready(function() {
+            $("button.c1").click (function() {
+                $("ul li").hide();
+            });
+
+            $("button.c2").click (function() {
+                $("[href]").hide();
+            });
+        });
+
+
+
+
+    </script>
+
+
+<body>
+
+    <h2>Heading</h2>
+
+    <p id="headline">Demo lines</p>
+    <p>Demo lines after the first line.</p>
+    <button class="c">Hide</button>
+
+    <p>Page list</p>
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+    </ul>
+
+    <p>Page list 2</p>
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+    </ul>
+    <button class="c1">hide</button>  
+    <p><a href="http://">Link</a></p> 
+    <button class="c2">hide</button>
+
+</body>
+</html>
