@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width" intial-scale="1"/>
+        <title>jQuery HTML dimensions</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <style>
+
+            
+        </style>
+
+        <script>
+
+            $(document).ready(function(){
+                $('#btn1').click(function(){
+                    $("#div1").load("fliter.html p");
+                });
+
+                $('#btn2').click(function(){
+                    $("#div2").load("fliter.html", function(responseTxt, statusTxt, xhr) {
+                        if(statusTxt == "success")
+                            alert("External content loaded successfully!");
+
+                        if(statusTxt == "error")
+                            alert("Error" + xhr.status + ": " + xhr.statusText);
+                    }
+                    
+                });
+
+            });
+
+
+            
+
+
+        </script>
+
+    </head>
+
+<body>
+
+    <div id = "div1">this is the content</div>
+    <button id = "btn1">click me</button>
+
+    <div id = "div2">this is the content</div>
+    <button id = "btn2">click me</button>
+
+
+
+
+</body>
+
+
+
+</html>
