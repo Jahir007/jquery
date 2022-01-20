@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width" intial-scale="1"/>
+        <title>jQuery HTML dimensions</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <style>
+            .ancestor * {
+                display: block;
+                border: 1px solid black;
+                color:gray;
+                padding: 5px;
+                margin: 15px;
+            }
+
+            .decendant * {
+                display: block;
+                border: 1px solid black;
+                color:gray;
+                padding: 5px;
+                margin: 15px;
+            }
+            
+        </style>
+
+        <script>
+
+            $(document).ready(function(){
+               //$('span').parentsUntil("div").css({color:'red',border: '1px solid red'}); 
+               $('div').find("*").css({color:'red',border: '1px solid red'});
+
+            });
+
+
+        </script>
+
+    </head>
+
+<body>
+
+    <div class = "ancestor">
+        <div style = "width: 300px;"> div (great grandparent)
+            <ul> (grandparent)
+                <li>(parent)    
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div style = "width: 300px;"> div (great grandparent)
+            <ul> (grandparent)
+                <li>(parent)
+                    <span>span</span>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class = "decendant" style = "width: 300px;"> div (current element)
+        <p class = "first"> p (child)
+            <span>span (grand child)</span>
+        </p>
+
+        <p class = "second"> p (child)
+            <span>span (grand child)</span>
+        </p>
+
+    </div>
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width" intial-scale="1"/>
+        <title>jQuery HTML dimensions</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <style>
+
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+
+            
+        </style>
+
+        <script>
+
+            $(document).ready(function(){
+                $("#myinput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                        $("#mytable tr").filter(function() {
+                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+
+            
+
+
+        </script>
+
+    </head>
+
+<body>
+
+    <h2> filter the data from table</h2>
+    <br>
+
+    <input type="text" id="myinput" placeholder="searching........" >
+    <br>
+    <br>
+
+    <table>
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>address</th>
+        </tr>
+        </thead>
+
+        <tbody id = "mytable">
+
+        <tr>
+            <td>1</td>
+            <td>mohamed</td>
+            <td>1@mail.com</td>
+            <td>0123456789</td>
+            <td>cairo</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>ahmed</td>
+            <td>2@mail.com</td>
+            <td>0123456789</td>
+            <td>cairo</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>ali</td>
+            <td>3@mail.com</td>
+            <td>0123456789</td>
+            <td>cairo</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>riken</td>
+            <td>4@mail.com</td>
+            <td>0123456789</td>
+            <td>cairo</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Vidit</td>
+            <td>5@mail.com</td>
+            <td>0123456789</td>
+            <td>cairo</td>
+        </tr>
+        </tbody>        
+    </table>
+
+
+</body>
+
+
+
+</html>

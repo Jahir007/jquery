@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width" intial-scale="1"/>
+        <title>jQuery HTML fliter</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <style>
+            
+
+            
+        </style>
+
+        <script>
+
+            $(document).ready(function(){
+                $('div').first().css("background-color",'yellow');
+                $('div').last().css("background-color",'gray'); 
+
+                $('p').eq(1).css("background-color",'red');
+                $("p").filter(".intro").css("background-color",'red');
+                
+                
+
+            });
+
+
+
+        </script>
+
+    </head>
+
+<body>
+
+<h2>THIS IS HTML</h2>
+<p>THIS IS HTML</p>
+
+<div style = "border: 1px solid black;">
+    <p>This is HTML paragraph.</p>
+    <p>This is HTML paragraph.</p>
+</div>
+<br>
+
+<div style = "border: 1px solid black;">
+    <p>This is HTML paragraph.</p>
+    <p>This is HTML paragraph.</p>
+</div>
+<br>
+
+<div style = "border: 1px solid black;">
+    <p>This is HTML paragraph.</p>
+    <p>This is HTML paragraph.</p>
+</div>
+<br>
+
+<h2>This is HTML</h2>
+
+<p>My name is Donald.</p>
+<p class="intro">I live in Duckburg.</p>
+<p class="intro">I love Duckburg.</p>
+<p>My best friend is Mickey.</p>
+
+
+</body>
+
+
+
+</html>
